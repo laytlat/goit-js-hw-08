@@ -20,9 +20,12 @@ function onFormInput(evt) {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log(parsedFormData);
+  console.log(formData);
   localStorage.removeItem('feedback-form-state');
   evt.currentTarget.reset();
+  for (key in formData) {
+    delete formData[key];
+  }
 }
 
 function loadInputValue() {
@@ -34,5 +37,4 @@ function loadInputValue() {
     textInput.value = parsedFormData.message;
     formData.message = parsedFormData.message;
   }
-  console.log(formData);
 }
