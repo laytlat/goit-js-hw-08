@@ -34,5 +34,4 @@ function loadInputValue() {
     textInput.value = parsedFormData.message;
     formData.message = parsedFormData.message;
   }
-  console.log(formData);
 }
