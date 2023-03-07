@@ -23,7 +23,7 @@ function onFormSubmit(evt) {
   console.log(formData);
   localStorage.removeItem('feedback-form-state');
   evt.currentTarget.reset();
-  for (key in formData) {
+  for (const key in formData) {
     delete formData[key];
   }
 }
