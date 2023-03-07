@@ -28,8 +28,11 @@ function onFormSubmit(evt) {
 function loadInputValue() {
   if (parsedFormData.email) {
     emailInput.value = parsedFormData.email;
+    formData.email = parsedFormData.email;
   }
   if (parsedFormData.message) {
     textInput.value = parsedFormData.message;
+    formData.message = parsedFormData.message;
   }
+  console.log(formData);
 }
